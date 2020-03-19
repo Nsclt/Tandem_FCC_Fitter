@@ -10,7 +10,7 @@ observables = [
 #0.1369516 0.00134933380244
 #============= Measurements ============================================#
 measurements = [
-    Measurement("Meas1","Obs1", 0.1351634, Uncertainties("stat"=>0.0,
+    Measurement("Meas1","Obs1", 0.1359318, Uncertainties("stat"=>0.0,
                                                     "syst"=>0.014))
 ]
 
