@@ -15,8 +15,7 @@ m = createmodel(observables, measurements, correlations)
 likelihood = CombinationDensity(m)
 
 prior = NamedTupleDist(
-    p1 = [-10.0..10.0],
-    p2 = [-20.0..20.0]
+    p1 = [-10.0..10.0]
 )
 
 posterior = PosteriorDensity(likelihood, prior)
@@ -26,3 +25,6 @@ nsamples = 10^4
 algorithm = MetropolisHastings()
 
 samples, stats = bat_sample(posterior, (nsamples, nchains), algorithm)
+
+plot(samples)
+savefig("fn.png")
