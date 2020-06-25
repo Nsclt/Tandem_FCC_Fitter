@@ -7,11 +7,14 @@ observables = [
     Observable("Obs1", obs1)
 ]
 
-#0.1369516 0.00134933380244
+
+#    sigma_345 = 0.544
+#    sigma_err_345 = 0.018
+#    factor_345 = sigma_err_345/sigma_345
 #============= Measurements ============================================#
 measurements = [
     Measurement("Meas1","Obs1", 0.1364834, Uncertainties("stat"=>0.0,
-                                                    "syst"=>0.014))
+                                                    "syst"=>0.004515994853))
 ]
 
 

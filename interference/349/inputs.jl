@@ -1,19 +1,21 @@
 #============= Observables =============================================#
 function obs1(params)
-    0.1368353544473742.+0.307405447242505*params.p1.+0.1801511199743669*params.p1.^2
+    0.29796268513535684.+0.6642643280073814*params.p1.-0.5261073094023664*params.p2.-0.6691207492774258*params.p1.*params.p2.+0.39111611234007365*params.p1.^2 .+0.32289579629971576*params.p2.^2
 end
 
 observables = [
     Observable("Obs1", obs1)
 ]
 
-#Sigma from Paper: 0.544pb
-#Error on Sigma from Paper: 0.018 
-#uncertainty: Error/Sigma times MG_value
+
+#    sigma_349 = 0.535
+#    sigma_err_349 = 0.02
+#    factor_349 = sigma_err_349/sigma_349
+
 #============= Measurements ============================================#
 measurements = [
-    Measurement("Meas1","Obs1", 0.1359318, Uncertainties("stat"=>0.0,
-                                                    "syst"=>0.00449774))
+    Measurement("Meas1","Obs1", 0.293804, Uncertainties("stat"=>0.0,
+                                                    "syst"=>0.0109833271))
 ]
 
 
